@@ -4,6 +4,7 @@ from fpdf import FPDF
 con = sqlite3.connect('database.db')
 cur = con.cursor()
 
+# https://www.sqlite.org/pragma.html
 cur.execute('PRAGMA table_info(ips)')
 columns = cur.fetchall()
 print(columns)
